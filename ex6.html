@@ -19,6 +19,21 @@
     <script>
         
         // add code here
+        var select = document.getElementById("select_item");
+        select.addEventListener("change", addlist);
+
+        function addlist(event){
+            var shoppingList = document.getElementById("shopList");
+            
+            var selectedValue = event.target.value;
+
+            var newListItem = document.createElement("li");
+
+            newListItem.textContent = selectedValue;
+
+            shoppingList.appendChild(newListItem);
+        }
+    
     
     </script>
 
